@@ -1,5 +1,5 @@
 const shortener = (url) => {
-  const baseURL = "u.rl/"
+  const baseURL = "localhost:4500/"
   return `${baseURL}${makeid(6)}`
 }
 
