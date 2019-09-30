@@ -14,4 +14,4 @@ const urlSchema = new Schema({
 })
 
 
-module.exports = mongoose.model('urlShortener', urlSchema);
+module.exports = mongoose.model('url', urlSchema);

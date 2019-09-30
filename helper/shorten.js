@@ -14,8 +14,5 @@ function makeid(length) {
   return result;
 }
 
-// console.log(shortener("google.com"));
 module.exports = shortener;
 
-
-// u.rl/buJUE9

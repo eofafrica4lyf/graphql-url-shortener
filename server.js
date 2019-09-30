@@ -35,12 +35,9 @@ app.use(
 		rootValue: {
 			urlShortener: async args => {
 				const url = args.url;
-				//check for existing URL record
-				// const record = await ShortenedUrl.findOne({ longURL: url })
 
 				return ShortenedUrl.findOne({ longURL: url })
 					.then(record => {
-						console.log(record);
 						if (record) {
 							return record;
 						} else {
@@ -65,7 +62,6 @@ app.get('/:id', async (req, res, next) => {
 	const URL = await ShortenedUrl.findOne({
 		shortURL: `localhost:4500/${req.params.id}`
 	});
-  console.log(URL,req.params.id);
   //if a record exists, redirect to the long URL, else, redirect to the home page
   if(URL){
     //format URL to be absolute if not already
